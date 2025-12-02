@@ -190,16 +190,16 @@ Run in a Python shell:
 ├── test_ollama.py         # Ollama health test
 ├── gemini_test.py         # Gemini API test
 └── mavi_unified.db        # Auto-generated SQLite DB</h4>  
----------------------------------
-### ❓ Troubleshooting
+------------------------------</br>
+❓ Troubleshooting
 Issue	Solution
 ollama not found	Install Ollama and restart terminal
 Cannot connect to Ollama	Ensure service is running: ollama list
 OCR error	Install Tesseract & configure PATH
 API key issues	Check .env formatting — no quotes
 Gemini errors	Run: python gemini_test.py
----------------------------------
-### 📄 License
+---------------------------------</br>
+📄 License
 
 MIT License
 FREE TO USE.
