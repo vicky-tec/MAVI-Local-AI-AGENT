@@ -104,7 +104,7 @@ Verify:
 > ollama list
 -------
 Step 2: Clone the Repository
-> git clone https://github.com/YourUsername/mavi-local-agent.git
+> git clone https://github.com/vicky-tec/MAVI-Local-AI-AGENT.git
 cd mavi-local-agent
 -------
 Step 3: Set up Python Environment
@@ -201,11 +201,6 @@ API key issues	Check .env formatting — no quotes
 Gemini errors	Run: python gemini_test.py
 ---------------------------------
 📄 License
-
-MIT License
-FREE TO USE.
-
-Created by Vicky Raj & Team (Cosmic Shakti).
 
 MIT License
 FREE TO USE.
