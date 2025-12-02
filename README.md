@@ -103,11 +103,11 @@ ollama pull qwen3-embedding:0.6b
 Verify:
 > ollama list
 -------
-**Step 2: Clone the Repository**
+Step 2: Clone the Repository
 > git clone https://github.com/YourUsername/mavi-local-agent.git
 cd mavi-local-agent
 -------
-**Step 3: Set up Python Environment**
+Step 3: Set up Python Environment
 Windows
 python -m venv .venv
 .\.venv\Scripts\activate
@@ -116,15 +116,15 @@ Mac/Linux
 python3 -m venv .venv
 source .venv/bin/activate
 --------
-**Step 4: Install Dependencies**
+Step 4: Install Dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
 ----------
-**Step 4: Install Dependencies**
+Step 4: Install Dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
 -----------
-**🔧 Configuration**
+🔧 Configuration
 
 Create a .env file in the project root:
 
@@ -138,17 +138,17 @@ EMBED_MODEL=qwen3-embedding:0.6b
 GEMINI_API_KEY=your_gemini_key_here
 NEWS_API_KEY=your_newsapi_key_here
 -------------
-**▶️ How to Run**
-**1. Run Diagnostic Tests (Optional)**
+▶️ How to Run
+1. Run Diagnostic Tests (Optional)
 python test_ollama.py
 python gemini_test.py
 -------------
-**2. Start MAVI**
+2. Start MAVI
 streamlit run mavi_unified.py
 Open in browser:
 👉 http://localhost:8501
 --------------
-**🛠 Slash Commands**
+🛠 Slash Commands
 | Command   | Example                      | Description         |
 | --------- | ---------------------------- | ------------------- |
 | `/calc`   | `/calc (50*4)/2`             | Safe calculator     |
@@ -156,7 +156,7 @@ Open in browser:
 | `/news`   | `/news technology`           | Latest headlines    |
 | `/fetch`  | `/fetch https://example.com` | Scrape webpage text |
 -----------------
-**📚 RAG (Document Chat)**
+📚 RAG (Document Chat)
 
 Upload a PDF or Image
 MAVI extracts text (PDF OCR + embeddings)
@@ -165,7 +165,7 @@ Ask:
 “Summarize the document I uploaded.”
 “What are the key points?”
 -------------------
-**🗂 File Organizer**
+🗂 File Organizer
 
 Run in a Python shell:
 
@@ -182,7 +182,7 @@ organize("C:/Users/Downloads")
  Voice Mode → Speech-to-text + TTS
  Multi-Agent System
  -------------------------
- **📂 Project Structure**
+ 📂 Project Structure
 .
 ├── mavi_unified.py        # Main application
 ├── requirements.txt       # Dependencies
@@ -192,7 +192,7 @@ organize("C:/Users/Downloads")
 ├── gemini_test.py         # Gemini API test
 └── mavi_unified.db        # Auto-generated SQLite DB
 ---------------------------------
-**❓ Troubleshooting**
+❓ Troubleshooting
 Issue	Solution
 ollama not found	Install Ollama and restart terminal
 Cannot connect to Ollama	Ensure service is running: ollama list
@@ -200,7 +200,7 @@ OCR error	Install Tesseract & configure PATH
 API key issues	Check .env formatting — no quotes
 Gemini errors	Run: python gemini_test.py
 ---------------------------------
-**📄 License**
+📄 License
 
 MIT License
 FREE TO USE.
@@ -210,4 +210,4 @@ Created by Vicky Raj & Team (Cosmic Shakti).
 MIT License
 FREE TO USE.
 
-Created by **Vicky Raj & Team (Cosmic Shakti)**.
+Created by Vicky Raj & Team (Cosmic Shakti).
