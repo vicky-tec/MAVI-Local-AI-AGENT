@@ -117,3 +117,5 @@ organize("C:/Users/YourName/Downloads")
 ### Next Steps I can do for you:
 
 Would you like me to write the content for the **`test_ollama.py`** or **`gemini_test.py`** scripts so you can include them in the repo immediately?
+
+<h1> FREE TO USE </h1>
