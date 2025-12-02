@@ -97,8 +97,8 @@ Install Ollama from:
 Then pull required models:
 
 
-ollama pull llama3.2:3b
-ollama pull qwen3-embedding:0.6b
+* ollama pull llama3.2:3b
+* ollama pull qwen3-embedding:0.6b
 ---
 Verify:
 > ollama list
@@ -109,20 +109,20 @@ cd mavi-local-agent
 -------
 Step 3: Set up Python Environment
 Windows
-python -m venv .venv
-.\.venv\Scripts\activate
+* python -m venv .venv
+* .\.venv\Scripts\activate
 -------
 Mac/Linux
-python3 -m venv .venv
-source .venv/bin/activate
+* python3 -m venv .venv
+* source .venv/bin/activate
 --------
 Step 4: Install Dependencies
-pip install --upgrade pip
-pip install -r requirements.txt
+* pip install --upgrade pip
+* pip install -r requirements.txt
 ----------
 Step 4: Install Dependencies
-pip install --upgrade pip
-pip install -r requirements.txt
+* pip install --upgrade pip
+* pip install -r requirements.txt
 -----------
 ### 🔧 Configuration
 
@@ -135,8 +135,8 @@ LLM_MODEL=llama3.2:3b
 EMBED_MODEL=qwen3-embedding:0.6b
 
 # API Keys (Optional)
-GEMINI_API_KEY=your_gemini_key_here
-NEWS_API_KEY=your_newsapi_key_here
+* GEMINI_API_KEY=your_gemini_key_here
+* NEWS_API_KEY=your_newsapi_key_here</h4>  
 -------------
 ### ▶️ How to Run
 1. Run Diagnostic Tests (Optional)
@@ -162,35 +162,35 @@ Upload a PDF or Image
 MAVI extracts text (PDF OCR + embeddings)
 
 Ask:
-“Summarize the document I uploaded.”
-“What are the key points?”
+* “Summarize the document I uploaded.”
+* “What are the key points?”</h4>  
 -------------------
 ### 🗂 File Organizer
 
 Run in a Python shell:
 
-from file_organizer import organize
-organize("C:/Users/Downloads")
+* from file_organizer import organize
+* organize("C:/Users/Downloads")</h4>  
 ----------------------
 ### 🗺 Roadmap / Future Work
 
- File Search Tool → /find <keyword>
- Document Summarizer → /summarize file.pdf
- CSV/Excel Data Analyzer
- YouTube Transcript Summaries
- OS Tools → App launcher, clipboard manager
- Voice Mode → Speech-to-text + TTS
- Multi-Agent System
+* File Search Tool → /find <keyword>
+* Document Summarizer → /summarize file.pdf
+* CSV/Excel Data Analyzer
+* YouTube Transcript Summaries
+* OS Tools → App launcher, clipboard manager
+* Voice Mode → Speech-to-text + TTS
+* Multi-Agent System
  -------------------------
 ### 📂 Project Structure
 .
-├── mavi_unified.py        # Main application
+<h4>├── mavi_unified.py        # Main application
 ├── requirements.txt       # Dependencies
 ├── .env                   # Environment variables (create manually)
 ├── file_organizer.py      # File sorting logic
 ├── test_ollama.py         # Ollama health test
 ├── gemini_test.py         # Gemini API test
-└── mavi_unified.db        # Auto-generated SQLite DB
+└── mavi_unified.db        # Auto-generated SQLite DB</h4>  
 ---------------------------------
 ### ❓ Troubleshooting
 Issue	Solution
