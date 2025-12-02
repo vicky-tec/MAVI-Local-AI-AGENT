@@ -181,24 +181,15 @@ Run in a Python shell:
 * OS Tools → App launcher, clipboard manager
 * Voice Mode → Speech-to-text + TTS
 * Multi-Agent System
- -------------------------
-### 📂 Project Structure
-<h4>├── mavi_unified.py        # Main application
-├── requirements.txt       # Dependencies
-├── .env                   # Environment variables (create manually)
-├── file_organizer.py      # File sorting logic
-├── test_ollama.py         # Ollama health test
-├── gemini_test.py         # Gemini API test
-└── mavi_unified.db        # Auto-generated SQLite DB</h4>  
-------------------------------</br>
-❓ Troubleshooting
-Issue	Solution
-ollama not found	Install Ollama and restart terminal
-Cannot connect to Ollama	Ensure service is running: ollama list
-OCR error	Install Tesseract & configure PATH
-API key issues	Check .env formatting — no quotes
-Gemini errors	Run: python gemini_test.py
----------------------------------</br>
+------------------------------
+❓ Troubleshooting</br>
+Issue	Solution</br>
+ollama not found	Install Ollama and restart terminal</br>
+Cannot connect to Ollama	Ensure service is running: ollama list</br>
+OCR error	Install Tesseract & configure PATH</br>
+API key issues	Check .env formatting — no quotes</br>
+Gemini errors	Run: python gemini_test.py</br>
+**------------------**
 📄 License
 
 MIT License
