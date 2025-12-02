@@ -183,7 +183,6 @@ Run in a Python shell:
 * Multi-Agent System
  -------------------------
 ### 📂 Project Structure
-.
 <h4>├── mavi_unified.py        # Main application
 ├── requirements.txt       # Dependencies
 ├── .env                   # Environment variables (create manually)
