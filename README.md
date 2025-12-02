@@ -1,8 +1,12 @@
 # MAVI – Local AI Agent (Memory-Augmented Virtual Intelligence)
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-orange) ![Streamlit](https://img.shields.io/badge/UI-Streamlit-red) ![License](https://img.shields.io/badge/License-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) 
+![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-orange)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-**MAVI** is a **local-first AI assistant** that runs primarily on your own machine using **Ollama** (local LLMs) with optional **Gemini** cloud fallback. Designed for students, developers, and privacy-conscious users, MAVI keeps your data on your device while offering powerful tools like RAG, vision analysis, and smart file organization.
+**MAVI** is a **local-first AI assistant** that runs entirely on your machine using **Ollama** for local LLMs, with optional **Gemini** cloud fallback for vision and enhanced reasoning.  
+Built for **students, developers, and privacy-focused users**, MAVI delivers RAG, OCR, modern tools, and smart file organization—while keeping all data on your device.
 
 ---
 
@@ -16,106 +20,194 @@
 6. [How to Run](#-how-to-run)
 7. [Usage Guide](#-usage-guide)
 8. [Project Structure](#-project-structure)
-9. [Roadmap](#-roadmap--future-work)
+9. [Roadmap / Future Work](#-roadmap--future-work)
 10. [Troubleshooting](#-troubleshooting)
+11. [License](#-license)
 
 ---
 
 ## 🚀 Features
 
-* **🧠 Local Intelligence:** Runs on `llama3.2:3b` via Ollama for privacy and offline capability.
-* **🔎 RAG (Retrieval-Augmented Generation):** Upload PDFs or images; MAVI indexes them and answers questions based on your documents.
-* **🛠️ Smart Tools:**
-    * `/calc`: Safe mathematical calculator.
-    * `/search`: Web search via DuckDuckGo.
-    * `/news`: Real-time news updates.
-    * `/fetch`: Scrape and clean text from URLs.
-* **👁️ Vision Capabilities:** Uses Gemini Vision to analyze and describe uploaded images.
-* **🗂️ File Organizer:** Automatically sorts clutter in folders into Images, Documents, Code, etc.
-* **💾 Long-term Memory:** Uses SQLite to store conversation history and document embeddings.
-* **💻 Modern UI:** Built with Streamlit featuring a "Midnight" dark theme.
+- **🧠 Local Intelligence**  
+  Runs on `llama3.2:3b` (via Ollama) for offline privacy-first inference.
+
+- **🔎 RAG (Retrieval-Augmented Generation)**  
+  Upload PDFs or images → MAVI extracts text and answers questions based on your docs.
+
+- **🛠️ Smart Tools**
+  - `/calc` — Safe calculator  
+  - `/search` — DuckDuckGo web search  
+  - `/news` — Real-time news  
+  - `/fetch` — Scrape & clean webpage text  
+
+- **👁 Vision Capabilities**  
+  Gemini Vision describes, interprets, and analyzes images.
+
+- **🗂 File Organizer**  
+  Automatically organizes messy folders (Images, Videos, Documents, Code, etc.).
+
+- **💾 Long-Term Memory**  
+  Stores conversation history and document indexes in SQLite.
+
+- **💻 Modern Streamlit UI**  
+  Midnight-dark interface with clean chat experience.
 
 ---
 
 ## 🏗 Architecture
 
-* **Backend:** Python 3 + SQLite (Memory & Vector Store).
-* **AI Engine (Primary):** Ollama (`llama3.2:3b` for chat, `qwen3-embedding:0.6b` for RAG).
-* **AI Engine (Fallback/Vision):** Google Gemini.
-* **Frontend:** Streamlit (Localhost).
+- **Backend:** Python + SQLite  
+- **LLM Engine (Primary):** Ollama  
+  - Chat model: `llama3.2:3b`  
+  - Embedding model: `qwen3-embedding:0.6b`
+- **Vision/Fallback Engine:** Google Gemini API  
+- **Frontend:** Streamlit UI running on `localhost:8501`
 
 ---
 
 ## ⚙ Prerequisites
 
-Before installing the Python code, ensure you have the following system requirements:
+### System Requirements
+- **OS:** Windows / macOS / Linux  
+- **RAM:** 8GB minimum (16GB recommended)
 
-1.  **OS:** Windows, macOS, or Linux.
-2.  **RAM:** 8GB minimum (16GB recommended).
-3.  **Software:**
-    * [Python 3.10+](https://www.python.org/downloads/)
-    * [Ollama](https://ollama.com/)
-    * [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) (Required for image text extraction).
+### Software Required
+- **Python 3.10+**
+- **Ollama**  
+- **Tesseract OCR** (required for extracting text from images)
+
+Links:
+- Python → https://www.python.org/downloads/  
+- Ollama → https://ollama.com  
+- Tesseract OCR → https://github.com/tesseract-ocr/tesseract  
 
 ---
 
 ## 📦 Installation (Step-by-Step)
 
-Follow these steps exactly to get MAVI running.
+Follow each step carefully:
 
-### Step 1: Install & Configure Ollama
-1.  Download and install **Ollama** from [ollama.com](https://ollama.com).
-2.  Open your terminal/command prompt and pull the necessary models:
-    ```bash
-    ollama pull llama3.2:3b
-    ollama pull qwen3-embedding:0.6b
-    ```
-3.  Verify Ollama is running by typing `ollama list`.
+---
 
-### Step 2: Clone the Repository
+### **Step 1: Install & Configure Ollama**
+
+Install Ollama from:  
+👉 https://ollama.com
+
+Then pull required models:
+
 ```bash
-git clone [https://github.com/YourUsername/mavi-local-agent.git](https://github.com/YourUsername/mavi-local-agent.git)
+ollama pull llama3.2:3b
+ollama pull qwen3-embedding:0.6b
+---
+Verify:
+> ollama list
+-------
+**Step 2: Clone the Repository**
+> git clone https://github.com/YourUsername/mavi-local-agent.git
 cd mavi-local-agent
-Step 3: Set up Python EnvironmentWindows:Bashpython -m venv .venv
-.venv\Scripts\activate
-Mac/Linux:Bashpython3 -m venv .venv
+-------
+**Step 3: Set up Python Environment**
+Windows
+python -m venv .venv
+.\.venv\Scripts\activate
+-------
+Mac/Linux
+python3 -m venv .venv
 source .venv/bin/activate
-Step 4: Install DependenciesBashpip install --upgrade pip
+--------
+**Step 4: Install Dependencies**
+pip install --upgrade pip
 pip install -r requirements.txt
-Step 5: Install Tesseract OCRWindows: Download Installer. Important: Add Tesseract to your System PATH during installation.Mac: brew install tesseractLinux: sudo apt-get install tesseract-ocr🔧 ConfigurationMAVI uses environment variables to manage API keys.Create a file named .env in the root folder.Copy and paste the following into it:Ini, TOML# .env file
+----------
+**Step 4: Install Dependencies**
+pip install --upgrade pip
+pip install -r requirements.txt
+-----------
+**🔧 Configuration**
 
-# Ollama Settings (Local)
+Create a .env file in the project root:
+
+# Ollama Settings
 OLLAMA_BASE_URL=http://localhost:11434/v1
 OLLAMA_API_KEY=ollama
 LLM_MODEL=llama3.2:3b
 EMBED_MODEL=qwen3-embedding:0.6b
 
-# API Keys (Optional but recommended)
-# Get key: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+# API Keys (Optional)
 GEMINI_API_KEY=your_gemini_key_here
-
-# Get key: [https://newsapi.org/](https://newsapi.org/)
 NEWS_API_KEY=your_newsapi_key_here
-▶️ How to Run1. Diagnostic Test (Optional)Run these scripts to ensure your environment is ready.Bash# Test local LLM connection
-python test_ollama.py 
-
-# Test Cloud/Vision connection
+-------------
+**▶️ How to Run**
+**1. Run Diagnostic Tests (Optional)**
+python test_ollama.py
 python gemini_test.py
-2. Start MAVIRun the main application:Bashstreamlit run mavi_unified.py
-A browser window will automatically open at http://localhost:8501.📖 Usage GuideBasic ChatSimply type in the chat box to talk to the local AI."Explain Quantum Computing.""Write a Python script to sort a list."Slash CommandsMAVI supports specific tools triggered by / commands:CommandUsageDescription/calc/calc (50*4)/2Solves math expressions safely./search/search AI newsSearches the web using DuckDuckGo./news/news technologyFetches live top headlines via NewsAPI./fetch/fetch https://...Scrapes text from a specific URL.RAG (Document Chat)Use the sidebar to Upload a PDF or Image.MAVI will process and index the file.Ask questions: "Summarize the document I just uploaded."File OrganizerTo organize a cluttered folder (e.g., Downloads), you can use the built-in script:Python# In a separate python script or terminal
+-------------
+**2. Start MAVI**
+streamlit run mavi_unified.py
+Open in browser:
+👉 http://localhost:8501
+--------------
+**🛠 Slash Commands**
+| Command   | Example                      | Description         |
+| --------- | ---------------------------- | ------------------- |
+| `/calc`   | `/calc (50*4)/2`             | Safe calculator     |
+| `/search` | `/search AI news`            | DuckDuckGo search   |
+| `/news`   | `/news technology`           | Latest headlines    |
+| `/fetch`  | `/fetch https://example.com` | Scrape webpage text |
+-----------------
+**📚 RAG (Document Chat)**
+
+Upload a PDF or Image
+MAVI extracts text (PDF OCR + embeddings)
+
+Ask:
+“Summarize the document I uploaded.”
+“What are the key points?”
+-------------------
+**🗂 File Organizer**
+
+Run in a Python shell:
+
 from file_organizer import organize
-organize("C:/Users/YourName/Downloads")
-🗺 Roadmap / Future WorkWe are actively working on these features:[ ] File Search: /find command to search local files and content.[ ] Summarization: /summarize for large local documents.[ ] Data Analysis: CSV/Excel visualization and statistics.[ ] Media Tools: YouTube video transcript extraction and summary.[ ] OS Integration: App launcher (/open code) and clipboard tools.[ ] Voice Mode: Speech-to-text and Text-to-Speech (TTS) integration.📂 Project StructureBash.
-├── mavi_unified.py        # 🚀 MAIN APP entry point
+organize("C:/Users/Downloads")
+----------------------
+🗺 Roadmap / Future Work
+
+ File Search Tool → /find <keyword>
+ Document Summarizer → /summarize file.pdf
+ CSV/Excel Data Analyzer
+ YouTube Transcript Summaries
+ OS Tools → App launcher, clipboard manager
+ Voice Mode → Speech-to-text + TTS
+ Multi-Agent System
+ -------------------------
+ **📂 Project Structure**
+.
+├── mavi_unified.py        # Main application
 ├── requirements.txt       # Dependencies
-├── .env                   # API Keys & Config (Create this!)
+├── .env                   # Environment variables (create manually)
 ├── file_organizer.py      # File sorting logic
-├── test_ollama.py         # Diagnostic tool for Ollama
-├── gemini_test.py         # Diagnostic tool for Gemini
-└── mavi_unified.db        # Database (Auto-created)
-❓ TroubleshootingIssueSolutionollama not foundEnsure Ollama is installed and added to your System PATH.Connection ErrorCheck if Ollama is running (ollama list) and port 11434 is open.OCR/Tesseract ErrorOn Windows, ensure Tesseract is in PATH. On Linux/Mac, verify installation.API ErrorsCheck your .env file to ensure API keys are pasted correctly without quotes.📄 LicenseDistributed under the MIT License. See LICENSE for more information.Original project by Vicky Raj and Team (Cosmic Shakti).
-### Next Steps I can do for you:
+├── test_ollama.py         # Ollama health test
+├── gemini_test.py         # Gemini API test
+└── mavi_unified.db        # Auto-generated SQLite DB
+---------------------------------
+**❓ Troubleshooting**
+Issue	Solution
+ollama not found	Install Ollama and restart terminal
+Cannot connect to Ollama	Ensure service is running: ollama list
+OCR error	Install Tesseract & configure PATH
+API key issues	Check .env formatting — no quotes
+Gemini errors	Run: python gemini_test.py
+---------------------------------
+**📄 License**
 
-Would you like me to write the content for the **`test_ollama.py`** or **`gemini_test.py`** scripts so you can include them in the repo immediately?
+MIT License
+FREE TO USE.
 
-<h1> FREE TO USE </h1>
+Created by Vicky Raj & Team (Cosmic Shakti).
+
+MIT License
+FREE TO USE.
+
+Created by **Vicky Raj & Team (Cosmic Shakti)**.
